@@ -1,21 +1,14 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddSingleton<SupplementService>();
-builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
+public class Program
 {
-    policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
-}));
+    public static void Main(string[] args)
+    {
+        CreateWebHostBuilder(args).Build().Run();
+    }
 
-var app = builder.Build();
-
-app.UseCors();
-
-app.MapGet("/api/supplements", (SupplementService svc) => Results.Ok(svc.GetAll()));
-
-app.Run();
-
-public partial class Program { }
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+               .UseStartup<Startup>();
+}
