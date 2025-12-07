@@ -1,5 +1,6 @@
 {
   "name": "supplement-frontend",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.44.0",
-    "vite": "5.0.0"
+    "vite": "5.0.0",
+    "@vitejs/plugin-react": "5.0.0"
   }
 }

@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- Exclude test sources placed under the bff/tests folder from the main project -->
+    <Compile Remove="tests\**\*.cs" />
+  </ItemGroup>
 </Project>
