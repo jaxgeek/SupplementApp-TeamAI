@@ -1,3 +1,14 @@
+# Visual Studio
+**/bin/
+**/obj/
+.vs/
+
+# Node
+node_modules/
+dist/
+
+# Playwright test artifacts
+playwright-report/
 # .NET
 bin/
 obj/

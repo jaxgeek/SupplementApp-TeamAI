@@ -1,3 +1,9 @@
+# nstall Git: https://git-scm.com/downloads
+# Install GitHub CLI (gh) optional but recommended: https://cli.github.com/
+# Sign in: PowerShell -> gh auth login (or use Git Credential Manager + PAT)
+
+
+
 # init repo, set name/email (only if not set globally)
 git config --global user.name "Barry"
 git config --global user.email "bear_b23@hotmail.com"
